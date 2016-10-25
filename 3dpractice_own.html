@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<style>
+		/*设置3D场景*/
+		.my3dspace{
+			perspective: 800px;
+			-webkit-transform-origin:50% 50%;
+			-moz-transform-origin:50% 50%;
+			-ms-transform-origin:50% 50%;
+			-o-transform-origin:50% 50%;
+			transform-origin:50% 50%;
+
+			overflow: hidden;
+		}
+		.pagegroup{
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			position: relative;
+		}
+		/*设置page的基础样式*/
+		.page{
+			width:360px;
+			height:360px;
+			padding: 20px;
+			background-color: #000;
+			text-align: center;
+			line-height:360px;
+			color: #fff;
+			font-size:360px;
+			font-weight:bold;
+			position: absolute;
+		}
+		#op{
+			text-align: center;
+			margin:40px auto;
+		}
+		/*设置page的3D属性和过渡属性*/
+		#page1{
+			-webkit-transform-origin:bottom;
+			-moz-transform-origin:bottom;
+			-ms-transform-origin:bottom;
+			-o-transform-origin:bottom;
+			transform-origin:bottom;
+
+			-webkit-transition: transform 1s linear;
+			-moz-transition: transform 1s linear;
+			-ms-transition: transform 1s linear;
+			-o-transition: transform 1s linear;
+			transition: transform 1s linear;
+		}
+		#page2,#page3,#page4,#page5,#page6{
+			-webkit-transform-origin:bottom;
+			-moz-transform-origin:bottom;
+			-ms-transform-origin:bottom;
+			-o-transform-origin:bottom;
+			transform-origin:bottom;
+
+			-webkit-transition: transform 1s linear;
+			-moz-transition: transform 1s linear;
+			-ms-transition: transform 1s linear;
+			-o-transition: transform 1s linear;
+			transition: transform 1s linear;
+
+			-webkit-transform: rotateX(90deg);
+			-moz-transform: rotateX(90deg);
+			-ms-transform: rotateX(90deg);
+			-o-transform: rotateX(90deg);
+			transform: rotateX(90deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="my3dspace">
+		<div class="pagegroup">
+			<div class="page" id="page1">1</div>
+			<div class="page" id="page2">2</div>
+			<div class="page" id="page3">3</div>
+			<div class="page" id="page4">4</div>
+			<div class="page" id="page5">5</div>
+			<div class="page" id="page6">6</div>
+		</div>
+	</div>
+	<div id="op">
+		<a href="javascript:next();">next</a>
+		<a href="javascript:pre();">pre</a>
+	</div>
+
+	<script>
+		var currentIndex = 1;
+		function next(){
+			if(currentIndex>=6){
+				return;
+			}
+
+			var currentPage = document.getElementById("page"+currentIndex);
+			console.log(currentPage);
+			currentPage.style.webkitTransform = 'rotateX(-90deg)';
+			currentPage.style.mozTransform = 'rotateX(-90deg)';
+			currentPage.style.msTransform = 'rotateX(-90deg)';
+			currentPage.style.oTransform = 'rotateX(-90deg)';
+			currentPage.style.transform = 'rotateX(-90deg)';
+
+			currentIndex++;
+			var nextPage = document.getElementById("page"+currentIndex);
+			nextPage.style.webkitTransform = 'rotateX(0deg)';
+			nextPage.style.mozTransform = 'rotateX(0deg)';
+			nextPage.style.msTransform = 'rotateX(0deg)';
+			nextPage.style.oTransform = 'rotateX(0deg)';
+			nextPage.style.transform = 'rotateX(0deg)';
+		}
+
+		function pre(){
+			if(currentIndex<=1){
+				return;
+			}
+
+			var currentPage = document.getElementById("page"+currentIndex);
+			console.log(currentPage);
+			currentPage.style.webkitTransform = 'rotateX(90deg)';
+			currentPage.style.mozTransform = 'rotateX(90deg)';
+			currentPage.style.msTransform = 'rotateX(90deg)';
+			currentPage.style.oTransform = 'rotateX(90deg)';
+			currentPage.style.transform = 'rotateX(90deg)';
+
+			currentIndex--;
+			var nextPage = document.getElementById("page"+currentIndex);
+			nextPage.style.webkitTransform = 'rotateX(0deg)';
+			nextPage.style.mozTransform = 'rotateX(0deg)';
+			nextPage.style.msTransform = 'rotateX(0deg)';
+			nextPage.style.oTransform = 'rotateX(0deg)';
+			nextPage.style.transform = 'rotateX(0deg)';
+		}
+	</script>
+</body>
+</html>

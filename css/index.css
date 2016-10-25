@@ -1,0 +1,358 @@
+@charset "UTF-8";
+body {
+  height:100%;
+  width:100%;
+  color: #5a5a5a;
+  font-family: "microsoft yahei";
+  background: url(../images/bg.jpg);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a315f', endColorstr='#1a315f',GradientType=0 );
+}
+.body-wrap{
+  height:90%;
+  width:90%;
+  margin:60px auto;
+  position: relative;
+}
+.navbar-default {
+  border: none;
+}
+
+nav {
+  width:90% !important;
+  margin:0 auto;
+  background: -webkit-linear-gradient(#9a5c51, #6a2f31, #592728);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#9a5c51, #6a2f31, #592728);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#9a5c51, #6a2f31, #592728);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#9a5c51, #6a2f31, #592728);
+  /* 标准的语法（必须放在最后） */
+  border: none;
+  box-shadow: 5px 4px 5px #000;
+  text-shadow: 0 1px 0 #ccc;
+}
+h3{
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#9a5c51), to(#6a2f31));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+}
+nav .navbar-brand {
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  color: #FFFFFF;
+  font: normal 50px Arial;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+   margin-left: 0px!important; 
+}
+
+nav .navbar-nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
+  width:100%;
+}
+nav .navbar-brand {
+  height: 80px;
+  padding-top: 0px;
+}
+.navbar-right{
+  padding-right: 5%;
+}
+nav .navbar {
+  min-height: 80px;
+}
+nav .navbar-toggle {
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+
+/* 轮播广告 */
+.carousel {
+  height: 500px;
+  margin-bottom: 40px;
+}
+.carousel img{
+  opacity:0.6;
+  filter:alpha(opacity=60); /* 针对 IE8 以及更早的版本 */
+}
+.carousel .item {
+  height: 500px;
+  background-color: #000;
+}
+
+.carousel .item img {
+  width: 100%;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+.carousel-caption p {
+  margin-bottom: 5%;
+  font-size: 20px;
+  line-height: 1.8;
+}
+/* 项目 */
+
+
+/* 工作经历 */
+.panel-group{
+	margin-top: 3%;
+	margin-bottom: 5%;
+}
+
+/* 案例 */
+.col-md-4{
+	margin-top: 2%;
+}
+figure {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: left
+}
+
+figure img {
+	width: 100%;
+	opacity: 0.8;
+	-webkit-transition: all .35s 0s;
+	-moz-transition: all .35s 0s;
+	-ms-transition: all .35s 0s;
+	-o-transition: all .35s 0s;
+	transition: all .35s 0s
+}
+
+figure figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-family: microsoft yahei
+}
+
+figure figcaption P,
+figure figcaption h4,
+figure figcaption span,
+figure figcaption div {
+	-webkit-transition: all .35s 0s;
+	-moz-transition: all .35s 0s;
+	-ms-transition: all .35s 0s;
+	-o-transition: all .35s 0s;
+	transition: all .35s 0s
+}
+
+figure {
+	background: #030
+}
+
+figure figcaption {
+	width: 100%;
+	height: 100%
+}
+
+figure figcaption h4 {
+	-webkit-transform: translate(0px, 0px) rotate(0);
+	-moz-transform: translate(0px, 0px) rotate(0);
+	-ms-transform: translate(0px, 0px) rotate(0);
+	-o-transform: translate(0px, 0px) rotate(0);
+	transform: translate(0px, 0px) rotate(0);
+	margin-top: 5%;
+	margin-left: 8%
+}
+
+figure figcaption p {
+	margin-left: 15%;
+	-webkit-transform: translate(0px, 50px) rotate(0);
+	-moz-transform: translate(0px, 50px) rotate(0);
+	-ms-transform: translate(0px, 50px) rotate(0);
+	-o-transform: translate(0px, 50px) rotate(0);
+	transform: translate(0px, 50px) rotate(0);
+	opacity: 0
+}
+
+/*特效1*/
+.figure1 figcaption #borderW {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	width: 0%;
+	height: 60%;
+	position: absolute;
+	top: 20%;
+	left: 50%
+}
+
+.figure1 figcaption #borderH {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	width: 60%;
+	height: 0%;
+	position: absolute;
+	top: 50%;
+	left: 20%
+}
+
+.figure1:hover img {
+	opacity: 0.3;
+	transform: scale(1.2);
+}
+
+.figure1:hover h4 {
+	-webkit-transform: translate(40px, 0px) rotate(0);
+	-moz-transform: translate(40px, 0px) rotate(0);
+	-ms-transform: translate(40px, 0px) rotate(0);
+	-o-transform: translate(40px, 0px) rotate(0);
+	transform: translate(40px, 0px) rotate(0);
+	margin-top: 20%;
+	margin-left: 20%;
+}
+
+.figure1:hover p {
+	-webkit-transform: translate(40px, 0px) rotate(0);
+	-moz-transform: translate(40px, 0px) rotate(0);
+	-ms-transform: translate(40px, 0px) rotate(0);
+	-o-transform: translate(40px, 0px) rotate(0);
+	transform: translate(40px, 0px) rotate(0);
+	opacity: 1
+}
+
+.figure1:hover figcaption #borderW {
+	width: 80%;
+	height: 60%;
+	left: 10%
+}
+
+.figure1:hover figcaption #borderH {
+	width: 60%;
+	height: 80%;
+	top: 10%
+}
+
+/*特效2*/
+.figure2 {
+	background: #030
+}
+
+.figure2 figcaption {
+	width: 100%;
+	height: 100%
+}
+
+.figure2 figcaption p {
+	margin-left: 15%;
+	-webkit-transform: translate(0px, 50px) rotate(0);
+	-moz-transform: translate(0px, 50px) rotate(0);
+	-ms-transform: translate(0px, 50px) rotate(0);
+	-o-transform: translate(0px, 50px) rotate(0);
+	transform: translate(0px, 50px) rotate(0);
+	opacity: 0
+}
+
+.figure2 figcaption div {
+	border: 2px solid #fff;
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	-webkit-transform: translate(0px, -350px) rotate(0);
+	-moz-transform: translate(0px, -350px) rotate(0);
+	-ms-transform: translate(0px, -350px) rotate(0);
+	-o-transform: translate(0px, -350px) rotate(0);
+	transform: translate(0px, -350px) rotate(0)
+}
+
+.figure2:hover img {
+	opacity: 0.3
+}
+
+.figure2:hover figcaption h4 {
+	margin-top: 20%;
+	margin-left: 20%;
+}
+.figure2:hover p {
+	-webkit-transform: translate(0px, 0px) rotate(0);
+	-moz-transform: translate(0px, 0px) rotate(0);
+	-ms-transform: translate(0px, 0px) rotate(0);
+	-o-transform: translate(0px, 0px) rotate(0);
+	transform: translate(0px, 0px) rotate(0);
+	opacity: 1
+}
+
+.figure2:hover figcaption div {
+	-webkit-transform: translate(0px, 0px) rotate(360deg);
+	-moz-transform: translate(0px, 0px) rotate(360deg);
+	-ms-transform: translate(0px, 0px) rotate(360deg);
+	-o-transform: translate(0px, 0px) rotate(360deg);
+	transform: translate(0px, 0px) rotate(360deg)
+}
+
+/*关于我*/
+.bs-example{
+	margin-top: 6%;
+}
+.scrollspy-example{      
+      position: relative;       
+      height: 200px;       
+      overflow-y: scroll;     
+}
+footer{
+	color: #003300;
+	margin-top: 5%;
+}  
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .body-wrap{
+      height:90%;
+      width:100%;
+      margin:60px auto;
+      position: relative;
+    }
+    nav {
+    width:100% !important;
+    }
+    
+    .summary {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .carousel {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .carousel .item {
+        height: 300px;
+    }
+
+    .carousel img {
+        min-height: 300px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .feature-heading {
+        font-size: 34px;
+    }
+
+    .feature-heading .text-muted {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) {
+    .feature-heading {
+        margin-top: 120px;
+    }
+}
